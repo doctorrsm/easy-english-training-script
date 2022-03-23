@@ -46,15 +46,19 @@ const trainWords = () => {
   });
 };
 trainWords();
-
+const click = new Event('click');
 document.addEventListener('keydown', (evt) =>{
-  const click = new Event('click');
+
   if (evt.code == 'Space' || evt.code == 'Enter' || evt.code == 'NumpadEnter' || evt.code == 'ArrowRight') {
     evt.preventDefault();
 
     if ( cardShow.classList.contains('hide')) {cardNext.dispatchEvent(click);} else { cardShow.dispatchEvent(click);}
 
   }
+});
+
+document.addEventListener('touchstart', () => {
+  if ( cardShow.classList.contains('hide')) {cardNext.dispatchEvent(click);} else { cardShow.dispatchEvent(click);}
 });
 
 cardNext.addEventListener('click', (evt) => {
