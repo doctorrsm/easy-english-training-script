@@ -47,12 +47,15 @@ const trainWords = () => {
 };
 trainWords();
 
-// document.addEventListener('keydown', (evt) =>{
-//   if (evt.code == 'Space' || evt.code == 'Enter' || evt.code == 'NumpadEnter' || evt.code == 'ArrowRight') {
-//     evt.preventDefault();
-//     trainWords();
-//   }
-// });
+document.addEventListener('keydown', (evt) =>{
+  const click = new Event('click');
+  if (evt.code == 'Space' || evt.code == 'Enter' || evt.code == 'NumpadEnter' || evt.code == 'ArrowRight') {
+    evt.preventDefault();
+
+    if ( cardShow.classList.contains('hide')) {cardNext.dispatchEvent(click);} else { cardShow.dispatchEvent(click);}
+
+  }
+});
 
 cardNext.addEventListener('click', (evt) => {
   trainWords();
