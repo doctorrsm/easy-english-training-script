@@ -35,7 +35,7 @@ const trainWords = () => {
   cardEng.classList.add('hide');
   cardShow.classList.remove('hide');
   cardNext.classList.add('hide');
-  let word = objects.shift();
+  const word = objects.shift();
   cardRu.textContent = word.ru;
   cardEng.textContent = word.eng;
   cardShow.addEventListener('click', (evt) => {
@@ -47,12 +47,13 @@ const trainWords = () => {
 };
 trainWords();
 
-cardNext.addEventListener('click', (evt) => {
+// document.addEventListener('keydown', (evt) =>{
+//   if (evt.code == 'Space' || evt.code == 'Enter' || evt.code == 'NumpadEnter' || evt.code == 'ArrowRight') {
+//     evt.preventDefault();
+//     trainWords();
+//   }
+// });
 
+cardNext.addEventListener('click', (evt) => {
   trainWords();
 });
-
-
-
-
-console.log(objects);

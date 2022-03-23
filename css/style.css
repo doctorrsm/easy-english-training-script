@@ -26,22 +26,39 @@ body {
 
 .card {
   min-width: 90%;
-  min-height: 100%;
+
   margin: 0 auto;
-  display: grid;
-  grid-template-rows: 1fr auto;
 }
 
 .card__eng-item {
   color: #2c8a32;
 }
+
 .card__buttons {
   margin-top: auto;
 }
+
 .hide {
   display: none;
 }
 
 button {
   background-color: #F19E18;
+}
+
+@media (min-width: 1000px) {
+  body {
+    font-size: 100px;
+  }
+
+  button {
+    font-size: 88px;
+  }
+
+  .card {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100%;
+  }
+
 }
