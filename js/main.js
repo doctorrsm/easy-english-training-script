@@ -26,56 +26,69 @@ const createObjects = () => {
     objects.push(obj);
   });
 };
-
+let i = 1;
 createObjects();
 const synth = window.speechSynthesis;
-let text = new SpeechSynthesisUtterance();
+let word = null;
+let text = null;
 const trainWords = () => {
-  synth.cancel();
+  text = new SpeechSynthesisUtterance();
+  text.lang = 'en-US';
+  synth.cancel()
+
   cardShow.textContent = 'Показать ответ';
   cardEng.classList.add('hide');
   cardShow.classList.remove('hide');
   cardNext.classList.add('hide');
-  const word = objects.shift();
-  cardRu.textContent = word.ru;
-  cardEng.textContent = word.eng;
-  console.log(objects)
-  text.text  = word.eng;
+  word = objects.shift();
+  const {
+    ru,
+    eng
+  } = word;
+  cardRu.textContent = ru;
+  cardEng.textContent = eng;
+  text.text = eng;
 
-  cardShow.addEventListener('click', (evt) => {
-
-    cardEng.classList.remove('hide');
-    cardShow.classList.add('hide');
-    cardNext.classList.remove('hide');
-
-    synth.speak(text);
-
-
-  });
 
 
 };
 trainWords();
+
+cardShow.addEventListener('click', (evt) => {
+  i++;
+  console.log(word)
+  console.log(i)
+  cardEng.classList.remove('hide');
+  cardShow.classList.add('hide');
+  cardNext.classList.remove('hide');
+
+  synth.speak(text);
+
+
+});
 
 cardNext.addEventListener('click', (evt) => {
 
   trainWords();
 });
 
-
-// const click = new Event('click');
-// document.addEventListener('keydown', (evt) =>{
-
-//   if (evt.code == 'Space' || evt.code == 'Enter' || evt.code == 'NumpadEnter' || evt.code == 'ArrowRight') {
-//     evt.preventDefault();
-//     synth.cancel();
-//     if ( cardShow.classList.contains('hide')) {cardNext.dispatchEvent(click);} else { cardShow.dispatchEvent(click);}
-
-//   }
-// });
-
-// document.addEventListener('touchstart', () => {
-//   synth.cancel();
-//   if ( cardShow.classList.contains('hide')) {cardNext.dispatchEvent(click);} else { cardShow.dispatchEvent(click);}
-// });
-
+const click = new Event('click');
+document.addEventListener('keydown', (evt) => {
+  if (evt.code == 'Space' || evt.code == 'Enter' || evt.code == 'NumpadEnter' || evt.code == 'ArrowRight') {
+    evt.preventDefault();
+    synth.cancel();
+    if (cardShow.classList.contains('hide')) {
+      cardNext.dispatchEvent(click);
+    } else {
+      cardShow.dispatchEvent(click);
+    }
+  }
+});
+document.addEventListener('touchstart', () => {
+  synth.cancel();
+  if (cardShow.classList.contains('hide')) {
+    cardNext.dispatchEvent(click);
+  } else {
+    cardShow.dispatchEvent(click);
+  }
+});
