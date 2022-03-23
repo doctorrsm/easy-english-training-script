@@ -28,9 +28,10 @@ const createObjects = () => {
 };
 
 createObjects();
-
+const synth = window.speechSynthesis;
+let text = new SpeechSynthesisUtterance();
 const trainWords = () => {
-
+  synth.cancel();
   cardShow.textContent = 'Показать ответ';
   cardEng.classList.add('hide');
   cardShow.classList.remove('hide');
@@ -38,29 +39,43 @@ const trainWords = () => {
   const word = objects.shift();
   cardRu.textContent = word.ru;
   cardEng.textContent = word.eng;
+  console.log(objects)
+  text.text  = word.eng;
+
   cardShow.addEventListener('click', (evt) => {
 
     cardEng.classList.remove('hide');
     cardShow.classList.add('hide');
     cardNext.classList.remove('hide');
+
+    synth.speak(text);
+
+
   });
+
+
 };
 trainWords();
-const click = new Event('click');
-document.addEventListener('keydown', (evt) =>{
-
-  if (evt.code == 'Space' || evt.code == 'Enter' || evt.code == 'NumpadEnter' || evt.code == 'ArrowRight') {
-    evt.preventDefault();
-
-    if ( cardShow.classList.contains('hide')) {cardNext.dispatchEvent(click);} else { cardShow.dispatchEvent(click);}
-
-  }
-});
-
-document.addEventListener('touchstart', () => {
-  if ( cardShow.classList.contains('hide')) {cardNext.dispatchEvent(click);} else { cardShow.dispatchEvent(click);}
-});
 
 cardNext.addEventListener('click', (evt) => {
+
   trainWords();
 });
+
+
+// const click = new Event('click');
+// document.addEventListener('keydown', (evt) =>{
+
+//   if (evt.code == 'Space' || evt.code == 'Enter' || evt.code == 'NumpadEnter' || evt.code == 'ArrowRight') {
+//     evt.preventDefault();
+//     synth.cancel();
+//     if ( cardShow.classList.contains('hide')) {cardNext.dispatchEvent(click);} else { cardShow.dispatchEvent(click);}
+
+//   }
+// });
+
+// document.addEventListener('touchstart', () => {
+//   synth.cancel();
+//   if ( cardShow.classList.contains('hide')) {cardNext.dispatchEvent(click);} else { cardShow.dispatchEvent(click);}
+// });
+

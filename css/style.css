@@ -12,18 +12,6 @@ body {
   background-color: #E0DAAE;
 }
 
-
-@media (min-width: 1000px) {
-  body {
-    font-size: 100px;
-  }
-
-  button {
-    font-size: 88px;
-  }
-
-}
-
 .card {
   min-width: 90%;
 
@@ -48,17 +36,24 @@ button {
 
 @media (min-width: 1000px) {
   body {
-    font-size: 100px;
+    font-size: 65px;
   }
 
   button {
     font-size: 88px;
+    min-width: 80%;
   }
 
   .card {
     display: grid;
     grid-template-rows: 1fr auto;
     min-height: 100%;
+  }
+
+  .card__eng-item {
+    font-size: 75px;
+    font-weight: bold;
+    font-family: sans-serif;
   }
 
 }
