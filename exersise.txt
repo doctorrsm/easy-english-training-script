@@ -1,0 +1,160 @@
+<p>  Он оставляет дом в 9 (leave home)
+He leaves home at 9
+Я ушел с работы в 6 (leave work)
+I left work at 6
+Вы начали в 10? (start)
+Did you start at 10?
+Они не работали вчера [yesterday]
+They did not work yesterday
+Я покрасил мою комнату [room] вчера
+I painted my room yesterday
+У него было 2 дома
+He had 2 houses
+Ты пришел пешком сюда? (walk)
+Did you walk here?
+Я не звонил ему (call)
+I did not call him
+Ты пришел домой в 12? (come home)
+Did you come home at 12?
+Он мне не понравился
+I did not like him
+У него нет телефона (have / a phone)
+He does not have a phone
+Я доберусь туда в 12 (get)
+I will get there at 12
+Ему не понравился их фильм [movie]
+He did not like their movie
+Я получил предложение о работе [a job offer]
+I got a job offer
+Он вышел на улицу (go outside)
+He went outside
+Мы увидим [see] его завтра [tomorrow]
+We will see him tomorrow
+Он продал [sell, неправильный] свою машину [car]
+He sold his car
+Он ушел в 12 (leave, неправильный)
+He left at 12
+Он нашел работу? [a job]
+Did he find a job?
+Ему нравится его работа? [job]
+Does he like his job?
+Им не понравится наш план (like)
+They will not like our plan
+Они возненавидят тебя
+They will hate you
+Mike не помнит (remember)
+Mike does not remember
+Они начнут (start) свой проект завтра [tomorrow]
+They will start their project tomorrow
+Я ей не понравился
+She did not like me
+Ты ей не нравишься
+She does not like you
+Vasya пошел домой
+Vasya went home
+Mike не пришел на ту вечеринку (come to that party)
+Mike did not come to that party
+Мы получили хорошее время (have a good time) (в смысле мы хорошо провели время)
+We had a good time
+Мне нравится эта вещь [thing]
+I like this thing
+Я пью кофе после [after] завтрака
+I drink coffee after breakfast
+Мы получим веселье завтра (have fun) (в смысле мы повеселимся завтра)
+	We will have fun tomorrow
+ей не нравятся цветы
+She does not like flowers
+Ты пришел пешком сюда? (walk)
+	Did you walk here?
+Им нравится наука? [science]
+Do they like science?
+Они заканчивают в 9? (finish)
+	Do they finish at 9?
+Я не говорил этого
+I did not say it
+Мы работали 5 часов вчера
+We worked for 5 hours yesterday
+ей не понравилась та вечеринка
+She did not like that party
+наш отец станет злым (get angry) (в смысле он разозлится)
+Our father will get angry
+Она спала 3 часа (sleep)
+She slept for 3 hours
+Она проспала 3 часа (sleep)
+She slept for 3 hours
+Я вас знаю? (know)
+Do I know you?
+Я получил завтрак в 7 (have breakfast) (в смысле "я позавтракал в 7")
+I had breakfast at 7
+Вы вчера пили? (drink)
+	Did you drink yesterday?
+Ему нравится наша собака
+He likes our dog
+Им понравился твой кот?
+Did they like your cat?
+Майк продал тот дом? (sell)
+Did Mike sell that house?
+Я не позвонил им
+I did not call them
+Я вышел с работы в 9 (leave)
+I left work at 9
+Я оставил свой телефон дома (leave)
+I left my phone at home
+Ей это понравилось?
+	Did she like it?
+Мы работали 10 часов (work)
+We worked for 10 hours
+Мы закончим этот проект в следующем году [next year]
+	We will finish this project next year
+Она выглядела красивой (look beautiful)
+	She looked beautiful
+Я купил этот компьютер в прошлом году
+I bought this computer last year
+Она поехала в Италию в прошлом году (go)
+She went to Italy last year
+Он жил в Италии 2 года (live)
+He lived in Italy for 2 years
+Он покинул Италию (leave)
+He left Italy
+Ему нравятся дорогие [expensive] машины
+He likes expensive cars
+Он выходит с работы в 9 (leave work)
+He leaves work at 9
+Он потерял [lose] ее телефонный номер [phone number]
+He lost her phone number
+Он купил свою машину на прошлой неделе [last week]
+He bought his car last week
+Я не принес этот учебник [textbook]
+I did not bring this texbook
+Она пришла в 2
+She came at 2
+Я знаю об [about] этом
+I know about it
+Ты расскажешь мне о [about] ней? (tell)
+Will you tell me about her?
+Я купил этот телефон у [from] моего друга (from здесь передает движение от моего друга ко мне)
+I bought this phone from my friend
+Я не говорил этого
+I did not say it
+Ты выяснил? (find out)
+Did you find out?
+Возьмешь нас в зоопарк? [to the zoo]
+Will you take us to the zoo?
+Она взяла мои деньги и ушла [walk away] ("away" означает движение прочь)
+She took my money and walked away
+Ты забыл? (forget)
+Did you forget?
+Я ездил в Италию в прошлом году (go to Italy)
+I went to Italy last year
+Он пришел один? (come alone)
+Did he come alone?
+Он вышел с работы в 9
+He left work at 9
+Она получила завтрак в 7 (в смысле "позавтракала")
+She had breakfast at 7
+Он стал здоровым (в смысле "он выздоровел" get well)
+He got well
+Она завтракала сегодня? [today]
+Did she have breakfast today?
+Он продает машины (sell)
+He sells cars</p>

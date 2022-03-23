@@ -1,0 +1,25 @@
+{
+  "name": "English training script",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Простой тренажёр английского",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:doctorrsm/easy-english-training-script.git"
+  },
+  "devDependencies": {
+    "browser-sync": "2.27.7",
+    "eslint": "8.7.0",
+    "eslint-config-htmlacademy": "5.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "scripts": {
+    "start": "browser-sync start --server --no-ui --files \"js/**/*.js\"",
+    "lint": "eslint js/"
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  }
+}
