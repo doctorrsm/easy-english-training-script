@@ -1,3 +1,4 @@
+
 const body = document.querySelector('body');
 const trainingCard = document.querySelector('#training-card').content.cloneNode(true);
 const cardTemplate = trainingCard.querySelector('.card').cloneNode(true);
@@ -25,15 +26,28 @@ const createObjects = () => {
     obj.eng = arr.shift();
     objects.push(obj);
   });
+
+  //Перемешиваем массив
+  objects.sort(() => Math.random() - 0.5);
+
+
 };
-let i = 1;
+
 createObjects();
+console.log(objects)
+let x = JSON.stringify(objects);
+console.log(x);
+x = JSON.parse(x)
+console.log(x);
+
 const synth = window.speechSynthesis;
 let word = null;
 let text = null;
-const trainWords = () => {
-  text = new SpeechSynthesisUtterance();
+text = new SpeechSynthesisUtterance();
   text.lang = 'en-US';
+
+const trainWords = () => {
+
   synth.cancel()
 
   cardShow.textContent = 'Показать ответ';
@@ -55,9 +69,7 @@ const trainWords = () => {
 trainWords();
 
 cardShow.addEventListener('click', (evt) => {
-  i++;
-  console.log(word)
-  console.log(i)
+
   cardEng.classList.remove('hide');
   cardShow.classList.add('hide');
   cardNext.classList.remove('hide');
@@ -84,6 +96,7 @@ document.addEventListener('keydown', (evt) => {
     }
   }
 });
+
 document.addEventListener('touchstart', () => {
   synth.cancel();
   if (cardShow.classList.contains('hide')) {
