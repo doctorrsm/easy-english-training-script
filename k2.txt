@@ -1,0 +1,85 @@
+Это тяжело [hard]	
+It is hard
+Ты есть поздний [late] ( в смысле "ты опоздал")	
+You are late
+Что я пропустил? (miss)	
+What did I miss?
+Я уволенный? [be fired] (в смысле "я уволен?")	
+Am I fired?
+Я хорошо выгляжу? [look good]	
+Do I look good?
+Куда вы ходили на прошлых выходных? (last weekend)	
+Where did you go last weekend?
+Она умная? (smart)	
+Is she smart?
+Она работает? (в смысле "работает вообще или безработная?")	
+Does she work?
+Ты утомленный? [tired]	
+Are you tired?
+Ты ездишь на работу? [drive to work] (в смысле "ездишь на машине или пешком ходишь?")	
+Do you drive to work?
+Ты помогаешь своим родителям? [your parents]	
+Do you help your parents?
+Ты больной? [sick] (в смысле "ты заболел что ли?")	
+Are you sick?
+Они здесь? [here]	
+Are they here?
+Они знают об этом? [about it]	
+Do they know about it?
+Он работает здесь?	
+Does he work here?
+Он на работе? [at work]	
+Is he at work?
+Мы ходили в кино [go to the movies]	
+We went to the movies
+На улице холодно	
+It is cold outside
+Мне предложили работу [offer a job]	
+They offered me a job
+Что тебе сказали?	
+What did they tell you?
+Кому ты звонил?	
+Who did you call?
+Она добирается домой к 8 (get home)	
+She gets home by 8
+Эта вечеринка утомляющая [boring] (в смысле скучная)	
+This party is boring
+Это весело? [fun]	
+Is it fun?
+Это помогает тебе? (help)	
+Does it help you?
+Он вышел из дома в 9 (leave home at 9)	
+He left home at 9	
+Ты поговорил со своими друзьями? (talk to your friends)	
+Did you talk to your friends?
+Куда вы ходите на выходных? [at weekends]	
+Where do you go at weekends?
+Где бассейн? [the pool]	
+Where is the pool?
+Как прошла твоя вечеринка? (go)	
+How did your party go?
+Это интересно [interesting]	
+It is interesting
+Когда ты встаешь? (get up)	
+When do you get up?
+Ты брал перерыв? (take a break)	
+Did you take a break?
+Я пойду в кровать сейчас (go to bed) (в смысле "я пойду спать)	
+I will go to bed now
+Где болит? (hurt)	
+Where does it hurt?
+Я только что [just] получил повышение зарплаты (get a payraise)	
+I just got a payraise
+Как он оказался здесь? (get here)	
+How did he get here?
+Что она сказала ему? [tell]	
+What did  she tell him?
+Почему ты продал свою машину?	
+Why did you sell your car?
+Кому ты звонил?	Who did you call?
+Я не знаю что случилось (happen)	
+I do not know what  happened
+Ты больной? [be sick] (в  смысле "ты заболел что ли?")	
+Are you sick?
+Ты работаешь по выходным? [work at weekends]	
+Do you work at weekends?

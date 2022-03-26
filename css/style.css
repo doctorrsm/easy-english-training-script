@@ -12,6 +12,15 @@ body {
   background-color: #E0DAAE;
 }
 
+
+
+
+.lessons-list {
+  text-align: left;
+  width: 60%;
+  margin: 0 auto;
+}
+
 .card {
   min-width: 90%;
 
@@ -26,9 +35,6 @@ body {
   margin-top: auto;
 }
 
-.hide {
-  display: none;
-}
 
 button {
   background-color: #F19E18;
@@ -56,4 +62,9 @@ button {
     font-family: sans-serif;
   }
 
+}
+
+
+.hide {
+  display: none;
 }

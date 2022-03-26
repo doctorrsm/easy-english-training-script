@@ -2,7 +2,7 @@
 const sentences = document.querySelector('.sentences');
 const arr = sentences.innerHTML.split('\n');
 sentences.style.display = 'none';
-const objects = [];
+const objectss = [];
 
 const createObjects = () => {
   arr.forEach(() => {
@@ -12,11 +12,13 @@ const createObjects = () => {
     };
     obj.ru = arr.shift();
     obj.eng = arr.shift();
-    objects.push(obj);
+    objectss.push(obj);
   });
 };
 
 createObjects();
 
-export {objects };
+console.log(JSON.stringify(objectss));
+
+export {objectss };
 

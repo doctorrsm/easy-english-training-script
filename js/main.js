@@ -1,4 +1,4 @@
-
+//import { objectss } from "./data/create-objects.js";
 const body = document.querySelector('body');
 const trainingCard = document.querySelector('#training-card').content.cloneNode(true);
 const cardTemplate = trainingCard.querySelector('.card').cloneNode(true);
@@ -11,44 +11,17 @@ const cardEng = card.querySelector('.card__eng-item');
 const cardNext = card.querySelector('.card__next-button');
 const cardShow = card.querySelector('.card__show-button');
 
-const sentences = body.querySelector('.sentences');
-const arr = sentences.innerHTML.split('\n');
-sentences.style.display = 'none';
-
-const objects = [];
-const createObjects = () => {
-  arr.forEach(() => {
-    const obj = {
-      eng: '',
-      ru: ''
-    };
-    obj.ru = arr.shift();
-    obj.eng = arr.shift();
-    objects.push(obj);
-  });
-
-  //Перемешиваем массив
-  objects.sort(() => Math.random() - 0.5);
-
-
-};
-
-createObjects();
-console.log(objects)
-let x = JSON.stringify(objects);
-console.log(x);
-x = JSON.parse(x)
-console.log(x);
+let objects = [];
 
 const synth = window.speechSynthesis;
 let word = null;
 let text = null;
 text = new SpeechSynthesisUtterance();
-  text.lang = 'en-US';
+text.lang = 'en-US';
 
 const trainWords = () => {
 
-  synth.cancel()
+  synth.cancel();
 
   cardShow.textContent = 'Показать ответ';
   cardEng.classList.add('hide');
@@ -62,46 +35,76 @@ const trainWords = () => {
   cardRu.textContent = ru;
   cardEng.textContent = eng;
   text.text = eng;
-
-
-
 };
-trainWords();
-
-cardShow.addEventListener('click', (evt) => {
-
-  cardEng.classList.remove('hide');
-  cardShow.classList.add('hide');
-  cardNext.classList.remove('hide');
-
-  synth.speak(text);
 
 
-});
 
-cardNext.addEventListener('click', (evt) => {
+const eventsHandler = () => {
+  cardShow.addEventListener('click', (evt) => {
 
-  trainWords();
-});
+    cardEng.classList.remove('hide');
+    cardShow.classList.add('hide');
+    cardNext.classList.remove('hide');
 
-const click = new Event('click');
-document.addEventListener('keydown', (evt) => {
-  if (evt.code == 'Space' || evt.code == 'Enter' || evt.code == 'NumpadEnter' || evt.code == 'ArrowRight') {
-    evt.preventDefault();
+    synth.speak(text);
+
+
+  });
+
+  cardNext.addEventListener('click', (evt) => {
+
+    trainWords();
+  });
+
+  const click = new Event('click');
+  document.addEventListener('keydown', (evt) => {
+    if (evt.code == 'Space' || evt.code == 'Enter' || evt.code == 'NumpadEnter' || evt.code == 'ArrowRight') {
+      evt.preventDefault();
+      synth.cancel();
+      if (cardShow.classList.contains('hide')) {
+        cardNext.dispatchEvent(click);
+      } else {
+        cardShow.dispatchEvent(click);
+      }
+    }
+  });
+
+  document.addEventListener('touchstart', () => {
     synth.cancel();
     if (cardShow.classList.contains('hide')) {
       cardNext.dispatchEvent(click);
     } else {
       cardShow.dispatchEvent(click);
     }
-  }
+  });
+};
+let urlRequest = '';
+const intro = document.querySelector('.intro');
+card.classList.add('hide');
+const lessons = Array.from(document.querySelectorAll('.lessons-list  li'));
+lessons.forEach((lesson) => {
+  lesson.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    urlRequest = evt.target.dataset.url;
+
+
+    fetch(urlRequest)
+      .then((response) => response.json())
+      .then((data) => {
+        objects = data;
+        objects.sort(() => Math.random() - 0.5);
+        intro.classList.add('hide');
+        card.classList.remove('hide');
+        trainWords();
+      });
+
+
+
+
+  });
 });
 
-document.addEventListener('touchstart', () => {
-  synth.cancel();
-  if (cardShow.classList.contains('hide')) {
-    cardNext.dispatchEvent(click);
-  } else {
-    cardShow.dispatchEvent(click);
-  }
-});
+
+
+
+eventsHandler();
