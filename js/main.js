@@ -87,12 +87,11 @@ lessons.forEach((lesson) => {
     evt.preventDefault();
     urlRequest = evt.target.dataset.url;
 
-
     fetch(urlRequest)
       .then((response) => response.json())
       .then((data) => {
         objects = data;
-        //objects.sort(() => Math.random() - 0.5);
+        objects.sort(() => Math.random() - 0.5);
         intro.classList.add('hide');
         card.classList.remove('hide');
         trainWords();
