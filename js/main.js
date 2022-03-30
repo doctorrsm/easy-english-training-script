@@ -1,4 +1,4 @@
-import { objectss } from "./data/create-objects.js";
+//import { objectss } from "./data/create-objects.js";
 const body = document.querySelector('body');
 const trainingCard = document.querySelector('#training-card').content.cloneNode(true);
 const cardTemplate = trainingCard.querySelector('.card').cloneNode(true);
