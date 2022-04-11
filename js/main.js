@@ -11,6 +11,7 @@ Vue.createApp({
       russian: 'Выберите урок, чтобы начать заниматься.',
       english: 'Английское предложение',
       buttonVisible: false,
+      sectionVisible: false,
       input: '',
       data: '',
       count: 0,
@@ -60,10 +61,11 @@ Vue.createApp({
           this.data = data;
           this.russian = this.data[this.count]['ru'];
           this.english = this.data[this.count]['eng'];
+          this.sectionVisible = true;
           document.querySelector('.say').focus();
           this.leftWords = this.data.length;
           this.input = '';
-        })
+        });
 
     },
     onEnter() {
