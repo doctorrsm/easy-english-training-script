@@ -55,13 +55,14 @@ Vue.createApp({
 
     },
     getData(urlRequest) {
+      this.sectionVisible = true;
       fetch(urlRequest)
         .then((response) => response.json())
         .then((data) => {
           this.data = data;
           this.russian = this.data[this.count]['ru'];
           this.english = this.data[this.count]['eng'];
-          this.sectionVisible = true;
+
           document.querySelector('.say').focus();
           this.leftWords = this.data.length;
           this.input = '';
