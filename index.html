@@ -1,38 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Простой тренажёр английских слов</title>
-  <link rel="stylesheet" href="css/style.css">
 </head>
-
+<style>
+  *:focus {
+    outline: 1px solid green;
+  }
+</style>
 <body>
-  <div class="intro">
-    <h3>Выберите упражнение:</h3>
-    <p>(для возврата в это меню просто обновите страницу)</p>
-    <ul class="lessons-list">
-      <li data-url="https://doctorrsm.github.io/easy-english-training-script/lesson1.json">1 урок</li>
-      <li data-url="https://doctorrsm.github.io/easy-english-training-script/lesson2.json">2 урок</li>
-      <li data-url="https://doctorrsm.github.io/easy-english-training-script/lesson3.json">3 урок</li>
-      <li data-url="https://doctorrsm.github.io/easy-english-training-script/st1.json">Тренажёр 1</li>
-      <li data-url="https://doctorrsm.github.io/easy-english-training-script/st2.json">Тренажёр 2</li>
-    </ul>
-  </div>
-  <template id="training-card">
-    <article class="card">
-      <div class="card__list">
-        <p class="card__item card__ru-item">Русское Предложение</p>
-        <p class="card__item card__eng-item hide">Английское преложение</p>
-      </div>
-      <p class="card__buttons">
-        <button class="card__show-button" type="button">Учить следующее слово</button>
-        <button class="card__next-button" type="button">Следующее предложение</button> </p>
-    </article>
-  </template>
-  <script src="./js/main.js" type="module"></script>
-</body>
+<div id="app" >{{message}}
+  <p>Выбирите урок:
+    <button @click="getData('https://doctorrsm.github.io/easy-english-training-script/lesson1.json')">Урок 1</button>
+    <button @click="getData('https://doctorrsm.github.io/easy-english-training-script/lesson2.json')">Урок 2</button>
+    <button @click="getData('https://doctorrsm.github.io/easy-english-training-script/lesson3.json')">Урок 3</button>
+  </p>
 
+  <p>{{ russian }}</p>
+  <p>
+    <input class="input" v-model="input" v-on:keydown.enter="onEnter()" style="width: 100%;" type="text" name="englishInput" id="">
+  </p>
+  <p  v-if="buttonVisible"> {{ english }}</p>
+  <button class="say" @click="say()">{{button1}}</button>
+  <button class="next" @click="next()" >{{button2}}</button>
+  <p>Осталось предложений: {{leftWords}}</p>
+</div>
+
+
+<script src="https://unpkg.com/vue@3"></script>
+<script src="main.js"></script>
+</body>
 </html>
