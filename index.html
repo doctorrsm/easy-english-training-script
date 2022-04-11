@@ -54,7 +54,7 @@
     <button @click="getData('https://doctorrsm.github.io/easy-english-training-script/lesson2.json')">Урок 2</button>
     <button @click="getData('https://doctorrsm.github.io/easy-english-training-script/lesson3.json')">Урок 3</button>
   </p>
-  <section v-if="sectionVisible">
+  <section v-show="sectionVisible">
   <p>{{ russian }}</p>
   <p>
     <input class="input" v-model="input" v-on:keydown.enter="onEnter()" style="width: 100%;" type="text" name="englishInput" id="">
