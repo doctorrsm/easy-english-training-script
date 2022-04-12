@@ -12,6 +12,7 @@ Vue.createApp({
       english: 'Английское предложение',
       buttonVisible: false,
       sectionVisible: false,
+      allSentensesVisible: false,
       input: '',
       data: '',
       count: 0,
@@ -49,10 +50,6 @@ Vue.createApp({
       this.english = this.data[this.count]['eng'];
       document.querySelector('.input').focus();
       this.input = '';
-
-
-
-
     },
     getData(urlRequest) {
       this.sectionVisible = true;
@@ -74,6 +71,21 @@ Vue.createApp({
       //this.say()
       //this.say();
       //document.querySelector('.next').focus();
+    },
+    shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1)); // случайный индекс от 0 до i
+
+        // поменять элементы местами
+        // мы используем для этого синтаксис "деструктурирующее присваивание"
+        // подробнее о нём - в следующих главах
+        // то же самое можно записать как:
+        // let t = array[i]; array[i] = array[j]; array[j] = t
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    },
+    showAllSententses() {
+      this.allSentensesVisible = !this.allSentensesVisible;
     }
 
   },
