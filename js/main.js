@@ -1,5 +1,5 @@
 const synth = window.speechSynthesis;
-let text = new SpeechSynthesisUtterance();
+const text = new SpeechSynthesisUtterance();
 text.lang = 'en-US'; //pl-PL en-US
 
 Vue.createApp({
