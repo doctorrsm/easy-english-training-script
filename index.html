@@ -45,6 +45,13 @@
     max-width: 699px;
     margin: 0 auto;
   }
+  .viewedSentence {
+    background-color: burlywood;
+    color: cadetblue;
+  }
+  .englishSentence {
+    color: #2c8a32;
+  }
 </style>
 <body>
 
@@ -67,10 +74,14 @@
   <p>Осталось предложений: {{leftWords}}</p>
     <button @click="shuffleArray(data)" type="button">Перемешать предложения.</button>
     <button @click="showAllSententses()" type="button">Показать все предложения</button>
-    <ul v-if="allSentensesVisible" v-for="(value, index) in data" >
-      <li :class="`eng${index}`" @click="value.eng">{{index}}: {{ value.ru }}</li>
-      <li class="red" :class="`ru${index}`">{{ value.eng }}</li>
-    </ul>
+    <section class="allSentences" v-if="allSentensesVisible">
+      <p>Нажмите на русское предложение, чтобы увидеть его перевод</p>
+      <p>Если вы знаете слово, отметьте его с помощью кнопки, чтобы удалить из списка</p>
+      <p>Затем скройте предложения и перемешайте, чтобы продолжить повторение.</p>
+      <ul v-for="(value, index) in data" :key="index">
+        <sentence-eng :text-ru="value.ru" :text-eng="value.eng"></sentence-eng>
+      </ul>
+    </section>
   </section>
 </div>
 

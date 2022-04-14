@@ -2,7 +2,7 @@ const synth = window.speechSynthesis;
 const text = new SpeechSynthesisUtterance();
 text.lang = 'en-US'; //pl-PL en-US
 
-Vue.createApp({
+const app = Vue.createApp({
   data() {
     return {
       message: 'Простой тренажёр английского языка',
@@ -92,5 +92,30 @@ Vue.createApp({
   created() {
     // Что делать при запуске приложения
   },
-}).mount('#app')
+})
 
+app.component('sentence-eng', {
+  data() {
+    return {
+      visible: false,
+    };
+  },
+  methods: {
+    say() {
+      this.visible = !this.visible;
+      synth.cancel();
+      text.text = this.textEng;
+      synth.speak(text);
+    }
+  },
+  props: ['textRu', 'textEng'],
+  template:
+    `<li :class="{viewedSentence: visible}" @click="say" >
+    {{ textRu }}
+    </li>
+    <li class="englishSentence" v-show="visible">
+      {{ textEng }}
+    </li>`
+})
+
+app.mount('#app');
