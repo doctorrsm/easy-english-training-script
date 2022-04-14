@@ -17,7 +17,7 @@ const app = Vue.createApp({
       data: '',
       count: 0,
       leftWords: 0
-    }
+    };
   },
   methods: {
 
@@ -31,7 +31,7 @@ const app = Vue.createApp({
       this.russian = this.data[this.count]['ru'];
       this.english = this.data[this.count]['eng'];
       text.text = this.data[this.count]['eng'];
-      synth.speak(text)
+      synth.speak(text);
 
       this.leftWords = this.data.length - this.count;
     },
@@ -67,7 +67,7 @@ const app = Vue.createApp({
 
     },
     onEnter() {
-      !this.buttonVisible ? this.say() : this.next()
+      !this.buttonVisible ? this.say() : this.next();
       //this.say()
       //this.say();
       //document.querySelector('.next').focus();
@@ -92,7 +92,7 @@ const app = Vue.createApp({
   created() {
     // Что делать при запуске приложения
   },
-})
+});
 
 app.component('sentence-eng', {
   data() {
@@ -104,8 +104,11 @@ app.component('sentence-eng', {
     say() {
       this.visible = !this.visible;
       synth.cancel();
-      text.text = this.textEng;
-      synth.speak(text);
+
+      if (this.visible) {
+        text.text = this.textEng;
+        synth.speak(text);
+      }
     }
   },
   props: ['textRu', 'textEng'],
@@ -116,6 +119,6 @@ app.component('sentence-eng', {
     <li class="englishSentence" v-show="visible">
       {{ textEng }}
     </li>`
-})
+});
 
 app.mount('#app');
